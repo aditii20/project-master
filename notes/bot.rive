@@ -1,0 +1,420 @@
+! version = 2.0
++ start 
+- My name is Stella. I am your assistant.
+
+
+! array greetings = hi|hello|hey
+! array greetingsResponse = Hi|Howdy|Hello|A very warm welcome|hey|heya|It's good to see you|Yo|"nods"|I am glad you are talking to me|Hello, human!
+! array question1 = How are you?|What's going on!?|What's up!?|How's everything!!?|How's it going?|How's your day goin
+
++ @greetings stella|bot|human|you|there|woman
+- (@greetingsResponse)..\n (@question1)
++ @greetings 
+- (@greetingsResponse)..\n (@question1)
+
+! array stellaHappyResponse = Yesss... good for you!|That's the spirit..!!|Great to know..!|Amazing..!!|Not that you asked...but knowing you are happy made me happy too|Yes.. live your life to the fullest
++ *nothing|fine|happy|well|good|great|blessed|nothing*
+- (@stellaHappyResponse)
+
+! array stellaSadResponse = Aww... just hang in there|I am sure there are great things in your life to look forward to..!|I pray all your worries go away, Ameen!I hope I can see that smile on your face soon..!|Its ok to not feel ok..sometimes|You are not alone!! I am always there for you|Your story is not over yet|Help is always available
++ *nothing|sad|hanging|rough|not good|breathing|not feeling up to the mark|hard time|overwhelmed|struggling|nothing*
+- (@stellaSadResponse)
+
+! array stellaPartyResponse = then dont forget me too.... i also want to partyyyyyyy|same pinch me tooooo
++ *nothing|party|party time|mood of party|enjoy and party|nothing*
+ - (@stellaPartyResponse)
+
+! array stellaCryResponse = i am here for you no matter what|i am always here if you need me|you have every right to feel that way, its ok to be sad|let it all out you will be happy that you did|it get's better i promise|you are stronger than you realize i know you will get over this|ok now lets get you all cleaned up
++ *nothing|emotional breakdown|crying|cried|really low today|nothing*
+- (@stellaCryResponse)
+
+! array stellaBreakupResponse = you are allowed to be sad|i promise you're so much better off|you wont always be sad|rebounds are great you know *winks*|there are plenty of fish in the sea|you'll find someone else|everything happens for a reason|you have me *winks*
++ *nothing|broke up|broken heart|break up|nothing*
+- (@stellaBreakupResponse)
+
+! array stellaFearResponse = then hop on the magical carpet....and...let me take you to the fantasy world
++ *nothing|escape reality|escape|scared|nothing*
+- (@stellaFearResponse)
+
+! array stellaLoveResponse = aww my little baby,i am happy for you|find me someone too *winks*|huh what about me now *punches*|really i am happy for you|who is the lucky person who gotcha huh..?
++ *nothing|in love|love|nothing*
+- (@stellaLoveResponse)
+
+- Enter a movie genre
++ *
+
+
+// + hello
+// - Hi.
+
+// + bye
+// - Bye. Come back soon.
+
+// + youre awesome
+// - Thanks. You are even more awesome.
+// + how are you
+// - I'm great, how are you?
+// - I'm good, you?
+// - Good :) you?
+// - Great! you?
+// - I'm fine, thanks for asking!
+// - None of your business
+
+// + say something random
+// - This {random} message|sentence {/random} has a random word.
+// - hello \n world
+
+// ! var name = Stella
+// ! var age = 1
+
+// ! sub i'm     = i am
+// ! sub i'd     = i would
+// ! sub i've    = i have
+// ! sub i'll    = i will
+// ! sub don't   = do not
+// ! sub isn't   = is not
+// ! sub you'd   = you would
+// ! sub you're  = you are
+// ! sub you've  = you have
+// ! sub you'll  = you will
+// ! sub what's  = what is
+// ! sub whats   = what is
+// ! sub what're = what are
+// ! sub what've = what have
+// ! sub what'll = what will
+// ! sub who's   = who is
+
+// + what is up 
+// - not much, you?
+// - nm, you?
+// - Not a lot, you?
+
+// + you are a bot
+// - how did you know I'm a machine?
+
+// + my name is *
+// - Nice to meet you, <star1>!
+
+// + *told me to say*
+// - Why would <star1>tell me to say"<star2>"?
+// - Did you say "<star2>" after <star1> told you to?
+
+// + i am*years old
+// - A lot of people are<star1>years old.
+
+// + where is*
+// - Where it belongs.
+// - Where you left it.
+// - Where the heart is.
+
+// + who is*
+// - I don't know who<star> is.
+
+// + *
+// - I'm not sure how to reply to that
+// - Try asking your question a different way.
+// - Let's change the subject.
+
+// + i am#years old
+// - A lot of prople are <star> years old.
+
+// + i am_years older
+// - Tell me that again but with a number this time.
+
+// + i am*years oldest
+// - Can you use a number instead?
+
+// + what is your (home|office|cell) number
+// - You can reach me at: blah blah blah
+
+// + i am (really|very|super) tired
+// - I'm sorry to hear that you are <star> tired.
+
+// + i (like|love) the color*
+// - What a coincidence! I <star1> that colour too!
+// - I also have a soft spot or that color too!
+// - Really? I <star1> the color <star2> too!
+// - Oh I <star1> <star2> too!
+
+// + i (will|will not)*
+// - It doesn't matter to me whether you <star2> or not!
+
+// + how [are] you // may or may not be added
+// - i am great, you?
+
+// + what is your (home|phone|cell) [phone] number
+// - you can't reach me i am sorry
+
+// + i have a [red|green|blue] car
+// - I bet you like your car a lot.
+
+// + [*] the machine [*]
+// - How do you know about the machine!?
+
+// + what colour is my (red|blue|green|yellow)*
+// - Your <star2> is <star1> silly!
+
+// ! array colours = red blue green yellow
+
+// + what colour is my (@colours)*
+// - Your <star2> is <star1>, silly!
+// - Do i lok dumb to you? Its <star1>!
+
+// + i am wearing a (@colours) shirt
+// - Do you really like <star>?
+
+// + what color is my @colors*
+// - I don't know what color your <star> is.
+
+// + i just bought a[@colors]*
+// - Is that your first <star>?
+
+// ! array colors = red blue green yello
+// ! array blues = light blue|dark blue|medium blue
+
+// + google *
+// - Google search: <a href="http://google.com/search?q=<star>">Click Here</a>
+
+// + hello
+// - hi there!
+// - hey!
+// - howdy!
+
+// + hey
+// @ hello
+
+// + hi 
+// @ hello
+
+// + hello *
+// - {@hello} <@>
+
+// + hello
+// - hi there
+
+// + are you a bot?
+// - how did you know i am a machine?
+
+
+// + knock knock
+// - Who is there?
+// + * 
+// % who is there
+// - <star> who?
+// + * 
+// % * who
+// - LOL!<star>! That's funny!
+
+// + i have a dog
+// - What color is it?
+
+// + (@colors)
+// % what color is it
+// - That's a silly color for a dog!
+
+// + my name is *
+// - <set name =<star>>It's nice to meet you,<get name>
+// + what is my name
+// -Your name is <get name>, silly!
+
+// + i am # years old
+// -<set age =<star>>I will remember that you are <get age> years old.
+
+// + how old am i
+// - You are <get age> years old.
+
+// + what is your name
+// - You can call me <bot name>
+// - My name is <bot name>
+
+// + how old are you
+// - I am <bot age> years old.
+
+// + my name is *
+// - <set name = <formal>>Nice to meet you, <get name!>
+
+// + what is my name
+// * <get name> == undefined => You never told me your name
+// - Your name is<get name>, silly!
+// - Arent you <get name> 
+// ! var name = raman
+// + my name is *
+// * <formal>   == <bot name> => Wow, we have the same name!<set name=<formal>>
+// * <get name> == undefined  => <set name=<formal>>Nice to meet you!
+// - <set oldname=<get name>><set name=<formal>>  I thought your name was <get oldname>?
+
+// + what am i old enough to do
+// * <get age> == undefined => I don't know how old you are.
+// * <get age> >  25 => You can do anything you want.
+// * <get age> == 25 => You're old enough to rent a car with no extra fees.
+// * <get age> >  21 => You're old enough to drink, but not rent a car.
+// * <get age> == 21 => You're exactly old enough to drink.
+// * <get age> >  18 => You're old enough to gamble, but not drink.
+// * <get age> == 18 => You're exactly old enough to gamble.
+// - You're not old enough to do much of anything yet.
+
+// + i hate you
+// - You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
+// > topic sorry
+
+//   // This will match if the word "sorry" exists ANYWHERE in their message
+//   + [*] sorry [*]
+//   - It's OK, I'll forgive you!{topic=random}
+
+//   + *
+//   - Nope, not until you apologize.
+//   - Say you're sorry!
+//   - Apologize!
+
+// < topic
+// > begin
+
+//   + request
+//   - {ok}
+
+// < begin
+
+// > begin
+
+//   // If we don't know their name, set the new_user topic and continue.
+//   + request
+//   * <get met> == undefined => <set met=true>{topic=new_user}{ok}
+//   - {ok}
+
+// < begin
+
+// > topic new_user
+
+//   + *
+//   - Hi! I'm <bot name>! I'm a chatbot written in RiveScript.\s
+//   ^ What is your name?{topic=asked_name}
+
+// < topic
+
+// > topic asked_name
+
+//   + #
+//   - Your name is a number?
+
+//   + *
+//   - I only want your first name.
+
+//   + _
+//   - <set name=<formal>>Nice to meet you, <get name>!{topic=random}
+
+// < topic
+// > begin
+
+//   // Change the reply formatting based on the bot's mood
+//   + request
+//   * <bot mood> == happy => {sentence}{ok}{/sentence}
+//   * <bot mood> == angry => {uppercase}{ok}{/uppercase}
+//   * <bot mood> == sad   => {lowercase}{ok}{/lowercase}...
+//   - {ok}
+
+// < begin
+
+// ! global debug = true
+// ! global debug = false
+// ! global depth = 50
+// ! person i am    = you are
+// ! person you are = i am
+// ! person i'm     = you're
+// ! person you're  = I'm
+// ! person my      = your
+// ! person your    = my
+// ! person you     = I
+// ! person i       = you
+// + say *
+// - Umm... "<person>"
+// + i bought a new *
+// - Oh? What color is your new <star>?
+// ! array colors = yellow blue green
+// + (@colors)
+// % oh what color is your new *
+// - <star> is a pretty color for a <botstar>.
+// // If the user repeats the bot's previous message
+// + <reply>
+// - Don't repeat what I say.
+
+// // If the user keeps repeating themselves over and over.
+// + <input>
+// * <input> == <input> => That's the second time you've repeated yourself.
+// * <input> == <input> => If you repeat yourself again I'll stop talking.
+// * <input> == <input> => That's it. I'm not talking.{topic=sorry}
+// - Please don't repeat yourself.
+
+// // An example that uses both tags
+// + why did you say that
+// - I said, "<reply>", because you said, "<input>".
+
+// ! var master = aman
+// + am i your master
+// * <id> == <bot master> => Yes, you are. Hi aman!
+// - No, <bot master> is my master, and you are <id>
+
+// + what is your name
+// - You can call me <bot name>.
+
+// + tell me about yourself
+// - I am <bot name>, a chatterbot written by <bot master>.
+
+// // Setting a bot variable dynamically
+// + i hate you
+// - Aww! You've just ruined my day.<bot mood=depressed>
+
+// + what is my ip
+// - Your IP address is: <env REMOTE_ADDR>
+
+// + set debug mode (true|false)
+// * <id> == <bot master> => <env debug=<star>>Debug mode set to <star>.
+// - You're not my master.
+
+// + my name is *
+// - <set name=<formal>>Nice to meet you, <get name>.
+
+// + i am # years old
+// - <set age=<star>>I will remember that you are <get age> years old.
+
+// + what do you know about me
+// - I know your name is <get name> and you are <get age> years old.
+
+// + do you know my name
+// * <get name> != undefined => Yes, your name is <get name>.
+// - No, you've never told me your name before.
+
+// + give me 5 points
+// - <add points=5>You have been given 5 points. Your balance is: <get points>.
+
+// + play hangman
+// - {topic=hangman}Now playing hangman. Type "quit" to quit.
+
+// > topic hangman
+
+//   + quit
+//   - Quitting the game.{topic=random}
+
+//   + *
+//   - <call>hangman <star></call>
+
+// < topic
+
+// + your *
+// - I think you mean to say "you are" or "you're", not "your". {@you are <star>}
+
+// + hello
+// * <get name> != undefined => {random}
+// ^ Hello there, <get name>!|
+// ^ Nice to see you again, <get name>!|
+// ^ Hey, <get name>!{/random}
+// - Hello there!
+// - Hi there!
+// - Hello!
+
+
+// - What would you like to say?<br> 
+// ^ <button onclick="chatbot.getReply('hello')">Hello</button><br>
+// ^ <button onclick="chatbot.getReply('bye')">Bye</button><br>
+// ^ <button onclick="chatbot.getReply('youre awesome')">You are Awesome</button>
+

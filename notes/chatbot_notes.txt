@@ -1,0 +1,116 @@
+chatbot
+a chatbot is a program that simulates a conversation between the user and the computer through audio or textual method
+1966 -- eliza 
+machine learning and natural language
+self learning -- use ai and ml algos to self learn things
+rule based -- work on a set of rules only
+
+library in python
+CHATTERBOT
+library in python 
+automated responses
+machine learning algo 
+language independent 
+train data
+
+limitations 
+domain knowledge 
+cant compare to humans
+personality -- cant comprehend knowlegde accurately
+
+working
+get input from the users
+process input and return the value that genrated the highest confidence value from the logic adapters
+return the response for the inputs
+
+training the chatterbot
+importe chatter bot corpus -- already has corpus
+train the bot
+it is the corpus of data inclined in chatterbot module
+flask(micro frame work) chatbot
+make a web app using flask 
+app contains a chatbot -- html and css files
+train the bot
+make conversations with the bot
+
+# python
+## worlds number one programming language
+## recommendation system websites == python == less time to code
+## nlp uses python == understands human english language and converse in the same
+## python libraries are really helpfull
+
+
+# chatbots
+## simulatations which can understand human language, process it and interact back with humans while performing specific tasks
+## first chatbot -- Joseph Wiesenbaun -- 1966 -- Eliza
+
+# history 
+## alan turing -- can machine think like humans?
+## turing test -- a person doesnt know that he/she is talking to a robot
+## if the machine successfully fools a human into thinking that he is talking to a real person is when a turing test is passed
+## google did a demo where they actually made a chatbot talk to the manager to book reservation in a restaurant 
+## one only needs to say book a reservation and the chatbot will actually book a ticket and remind you
+## Eliza -- 1966
+## Parry -- 1972
+## ALICE -- 1995
+## Smarter Child -- 2001
+## SIRI - 2010
+## Google Now -- 2012
+## Alexa -- 2015
+## human voice on the other side -- certain syllable are recorded and then the chatbot combines them and talks
+
+# Types
+## text based chatbots (Siri/ Alexa)
+## voice based chatbots (Siri/ Alexa)
+## customer care -- well rounded outputs and if it cannot solve the query it will link you to the human representative
+
+# Designing
+## rule based chatbots -- bot answers questions based on some rules on which it is trained on. the rules defined can be simple to very complex
+## self learning chatbots -- bot that learns how to communicate using the results of a machine learning model and access current situation -- more powerful in some cases
+
+# Application
+## helpdesk assistant -- if an order is running late 
+## email distributer -- spam filtering
+## home assistance -- vacumm cleaner  -- romba -- a theater
+## operation assistance -- technical questions to solve something
+## phone assistance -- siri/ google
+## entertainment assistance -- football/ basketball -- predict output
+
+# Architecture
+## chat window -- communicating with the chatbot -- creates a session every time you open it or say hey ....
+## a chatbot creates an active session which it uses as soon as it is called
+## tesla -- keeps asking question to know the person awakes
+## interface -- bridge between nlp model and chat window
+## NPL model -- neural network or machine learning algos
+## particular data sets to give out answers
+## programming to understand the question -- look for answers in the data
+## brain of the chatbots
+## corpus -- data -- dictionary -- repositary of information
+## application DB -- database which host the application and details on how to bridge the gap between the application to send it to the nlp and the nlp model uses the interface to push out those answers in textual form or verbal form
+
+# Working
+## 1. import corpus
+## corpus is the training data needed for the chatbot to learn
+## without corpus it is impossible for the chatbot to learn and reply something useful back to the user
+## it will not have any answers to the questions given
+## 2. data preprocessing -- text case handling
+## convert all the data coming as an input to either upper or lower case
+## this will avoid misrepresentation and misinterpretation of words if spelt under lower or upper case
+## 3. Tokenization 
+## is the structured process of converting a sentence into individual collection of words 
+## it will take the sentence and convert it into words and having a words corpus is easier as the chatbot can customize the answer based uppon that
+## 4. Stemming
+## process of finding similarities between words with the same root words
+## eg - jump jumps jumped jumping
+## 5.Generating bag of words
+## process of converting words into numbers genereating vectors embedding from the tokens generated
+## hashmapping -- order is not important
+## english words are broken into mathematical digits (vectors)
+## original word       BOW Vector
+##                     This         Is             A                Blog
+## This                 1           0              0                 0
+## Is                   0           1              0                 0                   
+## A                    0           0              1                 0
+## Blog                 0           0              0                 1
+## 6. One Hot Encodding
+## is a process by which categorical variables are converted into a form that ml algo
